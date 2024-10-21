@@ -1,5 +1,7 @@
 using "fels.lang.sfm"
 
+
+//CLASS DEPRECATED WITH CREATE color MODULE IN FELS LANGUAGE
 class Colors{
     func Colors(){}
 
