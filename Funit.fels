@@ -1,6 +1,7 @@
-using sfm,ftypes
+using "fels.lang.sfm"
+using "fels.lang.ftypes"
 
-import "fels/utils/Exceptions.fels"
+import "Exceptions.fels"
 
 class Funit{
     e = new Exceptions()
