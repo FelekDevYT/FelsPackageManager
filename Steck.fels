@@ -24,7 +24,7 @@ class Steck{
 		return virtualArr
 	}
 	
-	func emty(){
+	func empty(){
 		if(mp == 0) {
 			return true
 		}
