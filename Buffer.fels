@@ -1,4 +1,4 @@
-using sfm
+using "fels.lang.sfm"
 
 class Buffer{
 	buffer = ""
