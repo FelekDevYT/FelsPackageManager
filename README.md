@@ -33,3 +33,7 @@ And import you file for you can use it!
 | Buffer        | no           | Buffer of word       | set(text),get(),append(text)                                                                                                                                  |
 | ArrayDeque    | no           | ArrayDeque type      | add(text),addLast(text),push(text),size(),clear(),getFirst(),getLast()                                                                                        |
 
+
+## How you can upload you library
+
+Create pull request and i add you lib to FPM
