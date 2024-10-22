@@ -1,7 +1,0 @@
-[LIBRARY]
-
-name = "lib"
-version = 0.0.1
-creator = "FelekDevYT"
-description = "This is simple library for Fels programming language"
-dependencies = []
