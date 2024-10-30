@@ -1,19 +1,55 @@
 using "fels.lang.sfm"
 
+@class Colors
+@doc "Colors class for handling ANSI color codes."
+class Colors {
+    @function Colors
+    @doc "Constructor for initializing the Colors class."
+    func Colors() {}
 
-//CLASS DEPRECATED WITH CREATE color MODULE IN FELS LANGUAGE
-class Colors{
-    func Colors(){}
-
+    @function reset
+    @doc "Returns the ANSI code to reset colors."
+    @returns STRING
     func reset() = "\u001b[10m"
 
-    //Regular colors
+    // Regular colors
+    @function red
+    @doc "Returns the ANSI code for red color."
+    @returns STRING
     func red() = "\u001b[31m"
+
+    @function green
+    @doc "Returns the ANSI code for green color."
+    @returns STRING
     func green() = "\u001b[32m"
+
+    @function blue
+    @doc "Returns the ANSI code for blue color."
+    @returns STRING
     func blue() = "\u001b[34m"
+
+    @function white
+    @doc "Returns the ANSI code for white color."
+    @returns STRING
     func white() = "\u001b[37m"
+
+    @function black
+    @doc "Returns the ANSI code for black color."
+    @returns STRING
     func black() = "\u001b[40m"
+
+    @function purple
+    @doc "Returns the ANSI code for purple color."
+    @returns STRING
     func purple() = "\u001b[35m"
+
+    @function yellow
+    @doc "Returns the ANSI code for yellow color."
+    @returns STRING
     func yellow() = "\u001b[33m"
+
+    @function cyan
+    @doc "Returns the ANSI code for cyan color."
+    @returns STRING
     func cyan() = "\u001b[36m"
 }

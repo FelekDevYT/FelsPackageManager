@@ -3,34 +3,60 @@ using "fels.lang.ftypes"
 
 import "Exceptions.fels"
 
-class Funit{
+@class Funit
+@doc "Funit class for unit testing assertions."
+class Funit {
     e = new Exceptions()
 
-    func Funit(){}
+    @function Funit
+    @doc "Constructor for initializing the Funit class."
+    func Funit() {}
 
-    func assertEquals(v1,v2){
-        if(equals(v1,v2)) return 1
+    @function assertEquals
+    @doc "Asserts that two values are equal."
+    @param v1 VARIANT
+    @param v2 VARIANT
+    @returns NUMBER
+    func assertEquals(v1, v2) {
+        if (equals(v1, v2)) return 1
         e.FunitException("assertEquals false")
     }
 
-    func assertNotEquals(v1,v2){
-        if(!equals(v1,v2)) return 1
+    @function assertNotEquals
+    @doc "Asserts that two values are not equal."
+    @param v1 VARIANT
+    @param v2 VARIANT
+    @returns NUMBER
+    func assertNotEquals(v1, v2) {
+        if (!equals(v1, v2)) return 1
         e.FunitException("assertNotEquals false")
     }
 
-    func assertSameType(v1,v2){
-        if(typeOf(v1) == typeOf(v2)) return 1
+    @function assertSameType
+    @doc "Asserts that two values are of the same type."
+    @param v1 VARIANT
+    @param v2 VARIANT
+    @returns NUMBER
+    func assertSameType(v1, v2) {
+        if (typeOf(v1) == typeOf(v2)) return 1
         e.FunitException("Assertion mismatch types")
     }
 
-    func assertTrue(v1){
-        if(toInt(v1) != 0) return 1
+    @function assertTrue
+    @doc "Asserts that a value is true."
+    @param v1 VARIANT
+    @returns NUMBER
+    func assertTrue(v1) {
+        if (toInt(v1) != 0) return 1
         e.FunitException("Expected true, but found false")
     }
 
-    func assertFalse(v1){
-        if(toInt(v1) != 0) return 1
-        e.FunitException("Expected false, but fount true")
+    @function assertFalse
+    @doc "Asserts that a value is false."
+    @param v1 VARIANT
+    @returns NUMBER
+    func assertFalse(v1) {
+        if (toInt(v1) != 0) return 1
+        e.FunitException("Expected false, but found true")
     }
-
 }

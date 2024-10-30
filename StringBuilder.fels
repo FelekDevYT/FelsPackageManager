@@ -1,20 +1,28 @@
 using "fels.lang.sfm"
 
-class StringBuilder{
+@class StringBuilder
+class StringBuilder {
     val = NULL
-	
-	func StringBuilder(){
-  }
-	
-	func append(value){
-		val = val + value
-	}
 
-	func set(value){
-	    val = value
-	}
-	
-	func get(){
-		return val
-	}
+    @doc "Constructor for the StringBuilder class"
+    func StringBuilder() {
+    }
+
+    @doc "Append a value to the current string"
+    @param STRING value - The value to be appended
+    func append(value) {
+        val = val + value
+    }
+
+    @doc "Set the current string to a new value"
+    @param STRING value - The new value to set
+    func set(value) {
+        val = value
+    }
+
+    @doc "Get the current value of the string"
+    @returns STRING
+    func get() {
+        return val
+    }
 }

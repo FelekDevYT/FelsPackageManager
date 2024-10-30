@@ -3,35 +3,45 @@ using "fels.lang.ftypes"
 
 import "Exceptions.fels"
 
-class Converter{
-	func Converter(){
-	
-	}
-	
-	func toNumber(num){
-		if(typeOf(num) == STRING){
-			NN = toInt(num)
-			return NN
-		}
-	}
-	
-	func toBoolean(is){
-		if(typeOf(is) == NUMBER){
-			if(is == 0){
-				return false
-			}else{
-				return true
-			}
-		}else if(typeOf(is) == STRING){
-			if(is == "true") return true
-			else if(is == "false") return false
-			else if(is == "0") return false
-			else return true
-		}
-	}
-	
-	func getTypeOf(is){
-		return typeOf(is)
-	}
-	
+@class Converter
+@doc "Converter class for type conversion functions."
+class Converter {
+    @function Converter
+    @doc "Constructor for initializing the Converter class."
+    func Converter() {}
+
+    @function toNumber
+    @doc "Converts a string to a number if the input is a string."
+    @returns NUMBER
+    func toNumber(num) {
+        if (typeOf(num) == STRING) {
+            NN = toInt(num)
+            return NN
+        }
+    }
+
+    @function toBoolean
+    @doc "Converts a number or string to a boolean value."
+    @returns BOOLEAN
+    func toBoolean(is) {
+        if (typeOf(is) == NUMBER) {
+            if (is == 0) {
+                return false
+            } else {
+                return true
+            }
+        } else if (typeOf(is) == STRING) {
+            if (is == "true") return true
+            else if (is == "false") return false
+            else if (is == "0") return false
+            else return true
+        }
+    }
+
+    @function getTypeOf
+    @doc "Returns the type of the given input."
+    @returns STRING
+    func getTypeOf(is) {
+        return typeOf(is)
+    }
 }

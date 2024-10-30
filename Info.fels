@@ -1,45 +1,65 @@
-using "fels.lang.sfm"
-using "fels.utils.jfels"
+import "fels.lang.sfm"
+import "fels.utils.jfels"
 
-class Info{
+@class Info
+class Info {
 
     sys = newClass("java.lang.System")
 
-    func Info(){}
+    @doc "Constructor for the Info class"
+    func Info() {}
 
-    func getOSName(){
+    @doc "Get the operating system name"
+    @returns STRING
+    func getOSName() {
         return sys.getProperty("os.name")
     }
 
-    func getOSVersion(){
+    @doc "Get the operating system version"
+    @returns STRING
+    func getOSVersion() {
         return sys.getProperty("os.version")
     }
 
-    func getUserHome(){
+    @doc "Get the user's home directory"
+    @returns STRING
+    func getUser Home() {
         return sys.getProperty("user.home")
     }
 
-    func getJavaHome(){
+    @doc "Get the Java home directory"
+    @returns STRING
+    func getJavaHome() {
         return sys.getProperty("java.home")
     }
 
-    func getJavaVersion(){
+    @doc "Get the Java version"
+    @returns STRING
+    func getJavaVersion() {
         return sys.getProperty("java.version")
     }
 
-    func getOSArch(){
+    @doc "Get the operating system architecture"
+    @returns STRING
+    func getOSArch() {
         return sys.getProperty("os.arch")
     }
 
-    func getPathSeparator(){
+    @doc "Get the path separator"
+    @returns STRING
+    func getPathSeparator() {
         return sys.getProperty("path.separator")
     }
 
-    func getUserDir(){
+    @doc "Get the current user directory"
+    @returns STRING
+    func getUser Dir() {
         return sys.getProperty("user.dir")
     }
 
-    func getUserName(){
+    @doc "Get the username of the current user"
+    @returns STRING
+    func getUser Name() {
         return sys.getProperty("user.name")
     }
 }

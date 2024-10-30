@@ -1,37 +1,51 @@
 using "fels.lang.sfm"
 using "fels.utils.arrays"
 
-class List{
-	arr = NULL
-	lp = 0
+@class List
+class List {
+    arr = NULL
+    lp = 0
 
-	func List(size){
-		arr = arrays.array(size)
-	}
+    @doc "Constructor for the List class that initializes the array with a given size"
+    func List(size) {
+        arr = arrays.array(size)
+    }
 
-	func size(){
-		return length(arr)
-	}
+    @doc "Get the current size of the list"
+    @returns INTEGER
+    func size() {
+        return length(arr)
+    }
 
-	func set(pos,str){
-		arr[pos] = str
-		lp++
-	}
+    @doc "Set a value at the specified position in the list"
+    @param INTEGER pos - The position to set the value
+    @param STRING str - The value to set
+    func set(pos, str) {
+        arr[pos] = str
+        lp++
+    }
 
-	func get(pos){
-		return arr[pos]
-	}
+    @doc "Get the value at the specified position in the list"
+    @param INTEGER pos - The position to get the value from
+    @returns STRING
+    func get(pos) {
+        return arr[pos]
+    }
 
-	func isPosEmpty(pos){
-		if(arr[pos] == getEmpty()){
-			return true
-		}
-		return false
-	}
+    @doc "Check if the specified position is empty"
+    @param INTEGER pos - The position to check
+    @returns BOOLEAN
+    func isPosEmpty(pos) {
+        if (arr[pos] == getEmpty()) {
+            return true
+        }
+        return false
+    }
 
-	func add(str){
-		arr[lp] = str
-		lp++
-	}
-
+    @doc "Add a value to the end of the list"
+    @param STRING str - The value to add
+    func add(str) {
+        arr[lp] = str
+        lp++
+    }
 }

@@ -1,33 +1,43 @@
 using "fels.lang.sfm"
 
-class Steck{
-	arr = 0
-	mp = 0
-	
-	func Steck(size){
-		arr = array(size)
-	}
-	
-	func push(text){
-		arr[mp] = text
-		mp++
-	}
-	
-	func peek(){
-		return arr[mp]
-	}
-	
-	func pop(){
-		virtualArr = arr[mp]
-		arr[mp] = "NULL"
-		mp--
-		return virtualArr
-	}
-	
-	func empty(){
-		if(mp == 0) {
-			return true
-		}
-		return false
-	}
+@class Steck
+class Steck {
+    arr = 0
+    mp = 0
+
+    @doc "Constructor for the Steck class that initializes the array with a given size"
+    func Steck(size) {
+        arr = array(size)
+    }
+
+    @doc "Push a value onto the stack"
+    @param STRING text - The value to be pushed onto the stack
+    func push(text) {
+        arr[mp] = text
+        mp++
+    }
+
+    @doc "Peek at the top value of the stack without removing it"
+    @returns STRING
+    func peek() {
+        return arr[mp - 1]
+    }
+
+    @doc "Pop the top value off the stack and return it"
+    @returns STRING
+    func pop() {
+        if (mp == 0) {
+            return "NULL"
+        }
+        virtualArr = arr[mp - 1]
+        arr[mp - 1] = "NULL"
+        mp--
+        return virtualArr
+    }
+
+    @doc "Check if the stack is empty"
+    @returns BOOLEAN
+    func empty() {
+        return (mp == 0)
+    }
 }

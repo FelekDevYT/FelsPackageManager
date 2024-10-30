@@ -1,45 +1,70 @@
 using "fels.lang.sfm"
 using "fels.lang.ftypes"
 
-class ArrayDeque{
-	arr = 0
-	cmp = 0
-	cmnp = 0
-	ads = 0
+@class ArrayDeque
+@doc "ArrayDeque class for implementing a double-ended queue."
+class ArrayDeque {
+    arr = 0
+    cmp = 0
+    cmnp = 0
+    ads = 0
 
-	func ArrayDeque(size){
-		arr = array(size)
-		ads = size
-	}
+    @function ArrayDeque
+    @doc "Constructor for initializing the ArrayDeque with a given size."
+    func ArrayDeque(size) {
+        arr = array(size)
+        ads = size
+    }
 
-	func add(text){
-		arr[cmp] = text
-		cmp++
-	}
+    @function add
+    @doc "Adds an element to the end of the deque."
+    @returns NULL
+    func add(text) {
+        arr[cmp] = text
+        cmp++
+    }
 
-	func addLast(text){
-		arr[cmp] = text
-		cmp++
-	}
+    @function addLast
+    @doc "Adds an element to the end of the deque."
+    @returns NULL
+    func addLast(text) {
+        arr[cmp] = text
+        cmp++
+    }
 
-	func push(text){
-		arr[cmnp] = text
-		cmnp++
-	}
+    @function push
+    @doc "Adds an element to the front of the deque."
+    @returns NULL
+    func push(text) {
+        arr[cmnp] = text
+        cmnp++
+    }
 
-	func size(){
-		return ads
-	}
+    @function size
+    @doc "Returns the size of the deque."
+    @returns INTEGER
+    func size() {
+        return ads
+    }
 
-	func clear(){
-		arr = array(ads)
-	}
+    @function clear
+    @doc "Clears the deque by reinitializing the array."
+    @returns NULL
+    func clear() {
+        arr = array(ads)
+    }
 
-	func getFirst(){
-		return arr[(cmnp--)]
-	}
+    @function getFirst
+    @doc "Returns and removes the first element from the deque."
+    @returns STRING
+    func getFirst() {
+        return arr[(cmnp--)]
+    }
 
-	func getLast(){
-		return arr[cmp]
-	}
+    @function getLast
+    @doc "Returns the last element from the deque without removing it."
+    @returns STRING
+    func getLast() {
+        return arr[cmp]
+    }
 }
