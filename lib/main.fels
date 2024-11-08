@@ -1,0 +1,7 @@
+using "fels.lang.sfm"
+
+class lib{
+  func lib(){}
+
+  func getX() = 2
+}
