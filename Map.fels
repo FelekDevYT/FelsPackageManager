@@ -1,30 +1,22 @@
 using "fels.lang.sfm"
 using "fels.utils.arrays"
 
-@class Map
 class Map {
     MapNames = arrays.array(1000)
     MapValues = arrays.array(1000)
     pos = 0
 
-    @doc "Constructor for the Map class that initializes the MapNames and MapValues arrays with a given size"
     func Map(size) {
         MapNames = arrays.array(size)
         MapValues = arrays.array(size)
     }
 
-    @doc "Set a name-value pair in the map"
-    @param STRING name - The name/key to set
-    @param STRING value - The value associated with the name
     func set(name, value) {
         MapNames[pos] = name
         MapValues[pos] = value
         pos++
     }
 
-    @doc "Get the value associated with a given name"
-    @param STRING name - The name/key to look up
-    @returns STRING
     func get(name) {
         for (i = 0, i < MapNames.length(), i++) {
             if (name == MapNames[i]) {
@@ -34,15 +26,10 @@ class Map {
         return 0
     }
 
-    @doc "Get the current size of the map"
-    @returns INTEGER
     func size() {
         return length(MapNames)
     }
 
-    @doc "Check if the value associated with the given name is empty"
-    @param STRING name - The name/key to check
-    @returns BOOLEAN
     func isEmpty(name) {
         for (i = 0, i < length(MapNames), i++) {
             if (MapNames[i] == name) {

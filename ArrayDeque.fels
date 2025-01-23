@@ -1,69 +1,44 @@
 using "fels.lang.sfm"
 using "fels.lang.ftypes"
 
-@class ArrayDeque
-@doc "ArrayDeque class for implementing a double-ended queue."
 class ArrayDeque {
     arr = 0
     cmp = 0
     cmnp = 0
     ads = 0
 
-    @function ArrayDeque
-    @doc "Constructor for initializing the ArrayDeque with a given size."
     func ArrayDeque(size) {
         arr = array(size)
         ads = size
     }
 
-    @function add
-    @doc "Adds an element to the end of the deque."
-    @returns NULL
     func add(text) {
         arr[cmp] = text
         cmp++
     }
 
-    @function addLast
-    @doc "Adds an element to the end of the deque."
-    @returns NULL
     func addLast(text) {
         arr[cmp] = text
         cmp++
     }
 
-    @function push
-    @doc "Adds an element to the front of the deque."
-    @returns NULL
     func push(text) {
         arr[cmnp] = text
         cmnp++
     }
 
-    @function size
-    @doc "Returns the size of the deque."
-    @returns INTEGER
     func size() {
         return ads
     }
 
-    @function clear
-    @doc "Clears the deque by reinitializing the array."
-    @returns NULL
     func clear() {
         arr = array(ads)
     }
 
-    @function getFirst
-    @doc "Returns and removes the first element from the deque."
-    @returns STRING
     func getFirst() {
         return arr[(cmnp--)]
     }
 
-    @function getLast
-    @doc "Returns the last element from the deque without removing it."
-    @returns STRING
     func getLast() {
         return arr[cmp]
     }

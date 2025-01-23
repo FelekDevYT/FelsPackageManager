@@ -1,64 +1,44 @@
 import "fels.lang.sfm"
 import "fels.utils.jfels"
 
-@class Info
 class Info {
 
     sys = newClass("java.lang.System")
 
-    @doc "Constructor for the Info class"
     func Info() {}
 
-    @doc "Get the operating system name"
-    @returns STRING
     func getOSName() {
         return sys.getProperty("os.name")
     }
 
-    @doc "Get the operating system version"
-    @returns STRING
     func getOSVersion() {
         return sys.getProperty("os.version")
     }
 
-    @doc "Get the user's home directory"
-    @returns STRING
     func getUser Home() {
         return sys.getProperty("user.home")
     }
 
-    @doc "Get the Java home directory"
-    @returns STRING
     func getJavaHome() {
         return sys.getProperty("java.home")
     }
 
-    @doc "Get the Java version"
-    @returns STRING
     func getJavaVersion() {
         return sys.getProperty("java.version")
     }
 
-    @doc "Get the operating system architecture"
-    @returns STRING
     func getOSArch() {
         return sys.getProperty("os.arch")
     }
 
-    @doc "Get the path separator"
-    @returns STRING
     func getPathSeparator() {
         return sys.getProperty("path.separator")
     }
 
-    @doc "Get the current user directory"
-    @returns STRING
     func getUser Dir() {
         return sys.getProperty("user.dir")
     }
 
-    @doc "Get the username of the current user"
-    @returns STRING
     func getUser Name() {
         return sys.getProperty("user.name")
     }

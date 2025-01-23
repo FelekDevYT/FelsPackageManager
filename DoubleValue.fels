@@ -1,42 +1,19 @@
-@creator FelekDevYT
-@science PRE
-@version 1.0
-
 using "fels.lang.sfm"
 
-@class "DoubleValue.fels"
-@doc "DoubleValue class for you can written double-objects value"
 class DoubleValue{
-    @function DoubleValue
-    @doc "Constructor for initializing the DoubleValue class"
     func DoubleValue(val1,val2){
         this.val1 = val1
         this.val2 = val2
     }
 
-    @function getFirstValue
-    @doc "Getting first object"
-    @returns value
     func getFirstValue() = this.val1
 
-    @function getSecondValue
-    @doc "Getting second object"
-    @returns value
     func getSecondValue() = this.val2
 
-    @function setFirstValue
-    @doc "Setting first object"
-    @param value
     func setFirstValue(v) = this.val1 = v
 
-    @function setSecondValue
-    @doc "Setting second object"
-    @param value
     func setSecondValue(v) = this.val2 = v
 
-    @function getArrayedValue
-    @doc "Getting values from array"
-    @returns value
     func getArrayedValue() {
         arr = [0,0]
         arr[0] = this.val1
@@ -44,9 +21,6 @@ class DoubleValue{
         return arr
     }
 
-    @function setArrayedValue
-    @doc "Setting values by array"
-    @param array
     func setArrayedValue(arr){
         this.val1 = arr[0]
         this.val2 = arr[1]

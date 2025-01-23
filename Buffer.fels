@@ -1,34 +1,20 @@
 using "fels.lang.sfm"
 
-@class Buffer
-@doc "Buffer class for handling string buffers."
 class Buffer {
-    @NULL
     buffer = ""
 
-    @function Buffer
-    @doc "Constructor for initializing the buffer."
     func Buffer(b) {
         buffer = b
     }
 
-    @function set
-    @doc "Sets the value of the buffer."
-    @returns STRING
     func set(b) {
         buffer = b
     }
 
-    @function get
-    @doc "Returns the current value of the buffer."
-    @returns STRING
     func get() {
         return buffer
     }
 
-    @function append
-    @doc "Appends a string to the current value of the buffer."
-    @returns NULL
     func append(b) {
         buffer += b
     }

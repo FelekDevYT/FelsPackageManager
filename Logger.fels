@@ -1,25 +1,15 @@
-@creator FelekDevYT
-@version 1.0
-@science PRE
-@doc This class provides logging functionality for the application.
-
 import "fels.lang.memory"
 import "fels.io.files"
 import "fels.lang.string"
 
-@class Logger
 class Logger {
-    @returns STRING
     logFilePath = "test.log"
 
-    @function Logger
     func Logger() {
         @preprocess create
         files.create(logFilePath)
     }
 
-    @function log
-    @returns VOID
     func log(level, message) {
         logEntry = string.sprintf("[%s] %s\n", level, message)
         at = files.readAllText(logFilePath)
@@ -27,20 +17,14 @@ class Logger {
         println(logEntry)
     }
 
-    @function info
-    @returns VOID
     func info(msg) {
         this.log("INFO", msg)
     }
 
-    @function warn
-    @returns VOID
     func warn(msg) {
         this.log("WARNING", msg)
     }
 
-    @function error
-    @returns VOID
     func error(msg) {
         this.log("ERROR", msg)
     }
